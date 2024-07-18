@@ -1,6 +1,5 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete, ParseIntPipe } from '@nestjs/common';
 import { CardService } from './cards.service';
-import { UpdateCardDto } from './dto/update-cards.dto';
 import { MessagePattern, Payload } from '@nestjs/microservices';
 import { GetOneCardPayload } from './payload/get-one-card-payload';
 import { CreateCardPayload } from './payload/create-card-payload';

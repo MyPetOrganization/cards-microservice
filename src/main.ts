@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { Logger } from '@nestjs/common';
@@ -6,14 +7,15 @@ import { MicroserviceOptions, Transport } from '@nestjs/microservices';
 
 dotenv.config();
 
+console.log(process.env.NATS_SERVER, "NATS SERVER---------------------------------------");
+
 async function bootstrap() {
   const app = await NestFactory.createMicroservice<MicroserviceOptions>(
     AppModule,
     {
-      transport: Transport.TCP,
+      transport: Transport.NATS,
       options: {
-        host: process.env.HOST,
-        port: parseInt(process.env.PORT),
+        servers: [process.env.NATS_SERVER],
       },
     }
   );
