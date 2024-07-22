@@ -16,7 +16,6 @@ export class CardController {
     // @Param('id', ParseIntPipe) id: number,
     @Payload() payload: CreateCardPayload,
   ) {
-    console.log('payload', payload);
     const id = payload.createCardDto.userId;
     return await this.cardService.create(id,payload.createCardDto);
   }
