@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, ParseIntPipe } from '@nestjs/common';
+import { Controller, ParseIntPipe } from '@nestjs/common';
 import { CardService } from './cards.service';
 import { MessagePattern, Payload } from '@nestjs/microservices';
 import { GetOneCardPayload } from './payload/get-one-card-payload';

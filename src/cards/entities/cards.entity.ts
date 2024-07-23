@@ -1,4 +1,4 @@
-import { Column, DeleteDateColumn, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, DeleteDateColumn, Entity } from "typeorm";
 
 /**
  * Represents a card entity in the system.

@@ -1,5 +1,5 @@
 import { Transform } from "class-transformer";
-import { IsDate, IsNumber, IsString, Matches, Max, Min, min, minLength } from "class-validator";
+import { IsDate, IsNumber, IsString, Matches, Max, Min } from "class-validator";
 
 /**
  * The data to create a card.
