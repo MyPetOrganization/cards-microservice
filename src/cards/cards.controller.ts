@@ -15,7 +15,7 @@ export class CardController {
    * @returns The result of the card creation.
    */
 
-  @MessagePattern({ cmd: 'create-card' })
+  @MessagePattern({ cmd: 'create_card' })
   async create(
     @Payload() payload: CreateCardPayload,
   ) {
