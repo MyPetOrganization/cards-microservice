@@ -7,11 +7,11 @@ import { Column, DeleteDateColumn, Entity } from "typeorm";
 export class Cards {
 
     /**
-     * The number and identifier of the card.
+     * The string and identifier of the card.
      * @example 1234567890123456
      */
     @Column({ primary: true, unique: true, nullable: false })
-    public cardNumber: number;
+    public cardNumber: string;
 
     /**
      * The name of the card.

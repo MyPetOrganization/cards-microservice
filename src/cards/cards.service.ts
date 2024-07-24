@@ -48,9 +48,9 @@ export class CardService {
    * @param cardNumber - The card number of the card to retrieve.
    * @returns A promise that resolves to found the card with the specified card number.
    */
-  async findOne(id: number, cardNumber: number) {
+  async findOne(id: number, cardNumber: string) {
     // Check if the card with the specified card number exists.
-    if (isNaN(cardNumber)) {
+    if (cardNumber == null) {
       throw new NotFoundException('Card not found');
     }
     return await this.cardRepository.findOne({ where: { userId: id, cardNumber: cardNumber } });
@@ -69,10 +69,10 @@ export class CardService {
 
   /**
    * 
-   * @param id - The id of the card to delete.
+   * @param cardNumber - The cardNumber of the card to delete.
    * @returns A result of the card deletion.
    */
-  delete(id: number) {
-    return this.cardRepository.delete(id);
+  delete(cardNumber: string) {
+    return this.cardRepository.delete(cardNumber);
   }
 }

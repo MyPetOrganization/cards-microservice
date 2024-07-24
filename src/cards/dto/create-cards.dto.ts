@@ -11,8 +11,8 @@ export class CreateCardDto {
      * Verify that the card number is a number.
      * @example 123456789
      */
-    @IsNumber()
-    cardNumber: number;
+    @IsString()
+    cardNumber: string;
 
     /**
      * The name of the card.
