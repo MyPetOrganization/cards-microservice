@@ -51,10 +51,4 @@ export class Cards {
      */
     @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP', onUpdate: 'CURRENT_TIMESTAMP'})
     public updatedAt: Date;
-                        
-    /** 
-     * The date and time the card was deleted.
-     */
-    @DeleteDateColumn()
-    public deletedAt: Date;
 }
